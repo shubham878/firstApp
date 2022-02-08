@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    style="bold"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_40dp"
+        android:layout_marginStart="@dimen/margin_32dp"
+        android:layout_marginEnd="@dimen/margin_32dp"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="@dimen/main_heading_36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/personName"
+        android:layout_width="@dimen/width_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small_30dp"
+        android:layout_marginTop="@dimen/margin_top_40dp"
+        android:layout_marginEnd="@dimen/margin_small_30dp"
+        android:autofillHints="None"
+        android:drawableStart="@drawable/ic_baseline_person"
+        android:drawablePadding="@dimen/padding_10dp"
+        android:ems="10"
+        android:hint="@string/username"
+        android:text="@string/username"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register"
+        tools:ignore="RtlHardcoded,TouchTargetSizeCheck"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="@dimen/width_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small_30dp"
+        android:layout_marginTop="@dimen/margin_top_40dp"
+        android:layout_marginEnd="@dimen/margin_small_30dp"
+        android:autofillHints="emailAddress"
+        android:drawableStart="@drawable/ic_baseline_email"
+        android:drawablePadding="@dimen/padding_10dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="@string/email"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personName"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email">
+
+        <RadioButton
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_40dp"
+            android:padding="@dimen/padding_10dp"
+            android:text="@string/male"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Email" />
+
+        <RadioButton
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_top_40dp"
+            android:layout_marginTop="@dimen/margin_top_40dp"
+            android:text="@string/female"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/button1"
+            android:padding="@dimen/padding_10dp"
+            app:layout_constraintStart_toStartOf="@id/button1"
+            app:layout_constraintTop_toBottomOf="@+id/Email" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="@dimen/width_0dp"
+        android:layout_height="@dimen/margin_top_40dp"
+        android:layout_marginStart="@dimen/margin_small_30dp"
+        android:layout_marginTop="@dimen/margin_top_40dp"
+        android:layout_marginEnd="@dimen/margin_small_30dp"
+        android:autofillHints="none"
+        android:drawableStart="@android:drawable/ic_secure"
+        android:drawablePadding="@dimen/padding_10dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:text="@string/password"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="@dimen/width_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small_30dp"
+        android:layout_marginTop="@dimen/margin_top_40dp"
+        android:layout_marginEnd="@dimen/margin_small_30dp"
+        android:autofillHints="none"
+        android:drawableStart="@android:drawable/stat_sys_phone_call"
+        android:drawablePadding="@dimen/padding_10dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="@string/mobile_no"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_32dp"
+        android:layout_marginTop="@dimen/margin_small_30dp"
+        android:layout_marginEnd="@dimen/margin_32dp"
+        android:text="@string/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
